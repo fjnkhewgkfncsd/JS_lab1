@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const votes = ['A','B','C','A','B','A','A','A'];
+        function findWinner(votes){
+            let counterA = 0 ;
+            let counterB = 0 ;
+            let counterC = 0 ;
+            for(let i=0;i<votes.length;i++){
+                if(votes[i]==='A'){
+                    counterA++;
+                }else if(votes[i]==='B'){
+                    counterB++;
+                }else{
+                    counterC++;
+                }
+            }
+            let max=0;
+            let result;
+            if(counterA>counterB){
+                result = 'A is the winner.';
+                max=counterA;
+            }else if(counterA<counterB){
+                result = 'B is the winner.';
+                max=counterB;
+            }else if(counterC>max){
+                result = 'C is the winner.';
+            }
+            return result;
+        }
+        console.log(findWinner(votes));
+    </script>
+    
+
+</body>
+</html>
