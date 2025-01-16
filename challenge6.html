@@ -8,7 +8,11 @@
 <body>
     <script>
         const votes = ['A','B','C','A','B','A','A','A'];
+        //const votes = [];
         function findWinner(votes){
+            if(votes.length==0){
+                return "There is not vote yet!";
+            }
             let counterA = 0 ;
             let counterB = 0 ;
             let counterC = 0 ;
